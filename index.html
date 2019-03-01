@@ -15,14 +15,14 @@
 <body>
   <main class="container-fluid">
 
-   <h1 style="background-color: yellow">Finding area of Triangle</h1>
+   <h1 style="background-color: yellow">Section Estimator</h1>
 
-    <p style="font: bold">Enter breadth:
-      <input id="breadth" type="number" value="10">
+    <p style="font: bold">students:
+      <input id="students" type="number" value="120">
     </p>
 
-    <p style="font: bold">Enter Height:
-      <input id="height" type="number" value="12">
+    <p style="font: bold">sections:
+      <input id="sections" type="number" value="12">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me</button>
@@ -36,19 +36,19 @@
 
     console.log('Declare testable functions.....................')
 
-    function area(x, y) {
-      return 0.5*x*y
+    function average(x, y) {
+      return x/y
     }
-    console.log('Defined area=' + area)
+    console.log('Defined average=' + average)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
-      const i = parseInt(document.getElementById('breadth').value)
+      const i = parseInt(document.getElementById('students').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('height').value)
+      const j = parseInt(document.getElementById('sections').value)
       console.log('j=' + j)
-      const ans ='your area is ' + area(i, j) + '.'
+      const ans ='average number of students per section' + average(i, j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
